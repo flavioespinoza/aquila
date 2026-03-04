@@ -20,6 +20,7 @@ set(Aquila_Test_SOURCES
     Exceptions.cpp
     filter/MelFilter.cpp
     filter/MelFilterBank.cpp
+    functions/TransientDetector.cpp
     ml/Dtw.cpp
     source/Frame.cpp
     source/FramesCollection.cpp

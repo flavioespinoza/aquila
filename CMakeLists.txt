@@ -61,6 +61,7 @@ set(Aquila_HEADERS
     aquila/ml.h
     aquila/filter/MelFilter.h
     aquila/filter/MelFilterBank.h
+    aquila/functions/TransientDetector.h
     aquila/ml/DtwPoint.h
     aquila/ml/Dtw.h
     aquila/source/SignalSource.h
@@ -98,6 +99,7 @@ set(Aquila_HEADERS
 set(Aquila_SOURCES
     aquila/filter/MelFilter.cpp
     aquila/filter/MelFilterBank.cpp
+    aquila/functions/TransientDetector.cpp
     aquila/ml/Dtw.cpp
     aquila/source/SignalSource.cpp
     aquila/source/Frame.cpp

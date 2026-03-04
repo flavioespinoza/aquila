@@ -1,0 +1,45 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/capture_session_event.py start"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/process_transcript.py incremental"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/process_transcript.py final"
+          },
+          {
+            "type": "command",
+            "command": "python .claude/hooks/capture_session_event.py end"
+          }
+        ]
+      }
+    ]
+  },
+  "model": "Coyote",
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "sk-1234-tap-tap-go-new",
+    "ANTHROPIC_BASE_URL": "https://mercor-rl--litellm-proxy-serve.modal.run",
+    "ANTHROPIC_CUSTOM_HEADERS": "X-Session-Meta: task_id=TASK_13244;expert_name=Flavio Espinoza"
+  },
+  "alwaysThinkingEnabled": true
+}
