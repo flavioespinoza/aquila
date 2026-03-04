@@ -48,6 +48,7 @@ set(Aquila_Test_SOURCES
     transform/OouraFft.cpp
     transform/Dct.cpp
     transform/Spectrogram.cpp
+    functions/TransientDetector.cpp
 )
 
 if(SFML_FOUND)
